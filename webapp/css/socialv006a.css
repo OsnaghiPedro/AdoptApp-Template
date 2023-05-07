@@ -12198,7 +12198,7 @@ fieldset:disabled .btn {
     transition: none!important;
 }
 #loading-center {
-    background: url(../images/loader.png) no-repeat scroll center center;
+    background: url(../images/brand/loader.png) no-repeat scroll center center;
     background-size: 20%;
     width: 100%;
     height: 100%;
@@ -12218,7 +12218,7 @@ fieldset:disabled .btn {
 }
 
 .brand{
-    background: url(../images/brand-light.png) no-repeat scroll center center;
+    background: url(../images/brand/brand-light.png) no-repeat scroll center center;
     width: 185px;
     height: 45px;
     content: "";
@@ -12226,7 +12226,7 @@ fieldset:disabled .btn {
 }
 
 .dark .brand{
-    background: url(../images/brand-dark.png) no-repeat scroll center center;
+    background: url(../images/brand/brand-dark.png) no-repeat scroll center center;
 }
 @keyframes loader1 {
     0%, 100% {
