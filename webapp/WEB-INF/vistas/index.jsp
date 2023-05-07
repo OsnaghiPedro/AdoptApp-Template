@@ -1,418 +1,17 @@
-<!doctype html>
-<html lang="en" class="theme-fs-md">
+<!-- head -->
+
+<%@ include file="partials/head.jsp" %>
+
+<!-- navbar -->
+
+<%@ include file="partials/navbar.jsp" %>
+
+<!-- sidebar -->
+
+<%@ include file="partials/sidebar.jsp" %>
 
 
-<!-- Mirrored from templates.iqonic.design/socialv/bs5/html/dist/dashboard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Apr 2023 22:01:50 GMT -->
-
-<head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <title>AdoptApp</title>
-   <!-- Config Options -->
-   <meta name="setting_options"
-      content='{&quot;saveLocal&quot;:&quot;sessionStorage&quot;,&quot;storeKey&quot;:&quot;socialV&quot;,&quot;setting&quot;:{&quot;theme_scheme_direction&quot;:{&quot;value&quot;:&quot;ltr&quot;},&quot;theme_scheme&quot;:{&quot;value&quot;:&quot;light&quot;},&quot;theme_color&quot;:{&quot;colors&quot;:{&quot;--{{prefix}}primary&quot;:&quot;#50b5ff&quot;,&quot;--{{prefix}}info&quot;:&quot;#d592ff&quot;},&quot;value&quot;:&quot;theme-color-default&quot;},&quot;sidebar_type&quot;:{&quot;value&quot;:[]},&quot;sidebar_menu_style&quot;:{&quot;value&quot;:&quot;navs-rounded-all&quot;},&quot;footer&quot;:{&quot;value&quot;:&quot;default&quot;}}}'>
-   <!-- End Config Options -->
-   <link rel="shortcut icon" href="../../images/brand/favicon.png" />
-   <link rel="stylesheet" href="../../css/libs.min.css">
-   <link rel="stylesheet" href="../../css/socialv006a.css?v=5.0.2">
-   <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&amp;display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
-   <!-- flatpickr css -->
-   <link rel="stylesheet" href="../../vendor/flatpickr/dist/flatpickr.min.css" />
-   <!-- Sweetlaert2 css -->
-   <link rel="stylesheet" href="../../vendor/sweetalert2/dist/sweetalert2.min.css" />
-
-   <!-- vanillajs css -->
-   <link rel="stylesheet" href="../../vendor/vanillajs-datepicker/dist/css/datepicker.min.css">
-   <!-- color customizer css -->
-   <link rel="stylesheet" href="../../css/customizer.css">
-   <link rel="stylesheet" href="../../vendor/fontawesome/css/all.min.css">
-</head>
-
-<body class="  ">
-   <!-- loader Start -->
-   <div id="loading">
-      <div id="loading-center">
-      </div>
-   </div>
-   <!-- loader END -->
-   <!-- Wrapper Start -->
-
-   <!-- navbar superior -->
-   <div class="iq-top-navbar">
-      <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar p-lg-0">
-         <div class="container-fluid navbar-inner">
-            <div class="d-flex align-items-center flex-lg-row-reverse gap-3 pb-2 pb-lg-0">
-               <a class="sidebar-toggle" data-toggle="sidebar" data-active="true" href="javascript:void(0);">
-                  <div class="icon material-symbols-outlined iq-burger-menu">
-                     menu
-                  </div>
-               </a>
-
-               <!-- aqui el logo -->
-               <a href="index.html" class="d-flex align-items-center gap-2 iq-header-logo">
-                  <div class="brand img-fluid"></div>
-             
-               </a>
-
-            </div>
-            <!-- busqueda -->
-            <div class="iq-search-bar device-search  position-relative">
-               <form action="#" class="searchbox" data-bs-toggle="modal" data-bs-target="#searchmodal">
-                  <a class="search-link d-none d-lg-block" href="javascript:void(0);">
-                     <span class="material-symbols-outlined">search</span>
-                  </a>
-                  <input type="text" class="text search-input form-control bg-soft-primary  d-none d-lg-block"
-                     placeholder="¿Qué estás buscando?">
-                  <a class="d-lg-none d-flex d-none d-lg-block" href="javascript:void(0);" data-bs-toggle="modal"
-                     data-bs-target="#searchmodal">
-                     <span class="material-symbols-outlined">search</span>
-                  </a>
-               </form>
-               <!-- SUGERENCIAS DE BUSQUEDA -->
-               <div class="modal fade search-modal" id="searchmodal" aria-labelledby="searchmodalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog modal-fullscreen-lg-down">
-                     <div class="modal-content">
-                        <div class="modal-header py-2">
-                           <div class="d-flex align-items-center justify-content-between d-lg-none w-100">
-                              <form action="#" class="searchbox w-50" data-bs-toggle="modal"
-                                 data-bs-target="#searchmodal">
-                                 <a class="search-link" href="javascript:void(0);">
-                                    <span class="material-symbols-outlined">search</span>
-                                 </a>
-                                 <input type="text" class="text search-input form-control bg-soft-primary"
-                                    placeholder="¿Qué estás buscando?">
-                              </form>
-                              <a href="javascript:void(0);" class="material-symbols-outlined text-dark"
-                                 data-bs-dismiss="modal">close</a>
-                           </div>
-                           <div class="d-none d-lg-flex align-items-center justify-content-between w-100">
-                              <h4 class="modal-title" id="exampleModalFullscreenLabel">Busquedas recientes</h4>
-                              <a class="text-dark" href="javascript:void(0);">Limpiar</a>
-                           </div>
-                        </div>
-                        <div class="modal-body p-0">
-                           <div class="d-flex d-lg-none align-items-center justify-content-between w-100 p-3 pb-0">
-                              <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Busquedas recientes</h5>
-                              <a href="javascript:void(0);" class="text-dark">Limpiar</a>
-                           </div>
-
-                           <div class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                              <div class="flex-shrink-0">
-                                 <img src="../../images/page-img/19.jpg"
-                                    class="align-self-center img-fluid avatar-50 rounded-pill" alt="#">
-                              </div>
-                              <div class="d-flex flex-column ms-3 w-100">
-                                 <a href="javascript:void(0);" class="h5">Paige Turner</a>
-                                 <span>Paige001</span>
-                              </div>
-                              <div class="d-flex align-items-center ms-auto">
-                                 <a href="javascript:void(0);"
-                                    class="me-3 d-flex align-items-center"><small>Publicación</small>
-                                 </a>
-                                 <a href="javascript:void(0);" class="material-symbols-outlined text-dark">close</a>
-                              </div>
-                           </div>
-
-                           <!-- SUGERENCIAS -->
-                           <div class="">
-                              <h4 class="px-3 py-2">Resultados</h4>
-
-                              <div class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                 <div class="flex-shrink-0">
-                                    <img src="../../images/page-img/19.jpg"
-                                       class="align-self-center img-fluid avatar-50 rounded-pill" alt="#">
-                                 </div>
-                                 <div class="d-flex flex-column ms-3 w-100">
-                                    <a href="javascript:void(0);" class="h5">Paige Turner</a>
-                                    <span>Paige001</span>
-                                 </div>
-                                 <div class="d-flex align-items-center ms-auto">
-                                    <a href="javascript:void(0);"
-                                       class="me-3 d-flex align-items-center"><small>Publicación</small>
-                                    </a>
-                                    <a href="javascript:void(0);" class="material-symbols-outlined text-dark">close</a>
-                                 </div>
-                              </div>
-
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <ul class="navbar-nav navbar-list">
-               <li class="nav-item">
-                  <a href="index.html" class="d-flex align-items-center">
-                     <i class="material-symbols-outlined">home</i>
-                  </a>
-               </li>
-
-               <!-- notificaciones -->
-               <li class="nav-item dropdown">
-                  <a href="javascript:void(0);" class="search-toggle dropdown-toggle d-flex align-items-center"
-                     id="notification-drop" data-bs-toggle="dropdown">
-                     <i class="material-symbols-outlined">notifications</i>
-                  </a>
-                  <div class="sub-drop dropdown-menu" aria-labelledby="notification-drop">
-                     <div class="card shadow-none m-0">
-                        <div class="card-header d-flex justify-content-between bg-primary">
-                           <div class="header-title bg-primary">
-                              <h5 class="mb-0 text-white">Notificaciones</h5>
-                           </div>
-                           <small class="badge  bg-light text-dark">4</small>
-                        </div>
-
-                        <div class="card-body p-0">
-                           <a href="javascript:void(0);" class="iq-sub-card">
-                              <div class="d-flex align-items-center">
-                                 <div class="">
-                                    <img class="avatar-40 rounded" src="../../images/user/01.jpg" alt="">
-                                 </div>
-                                 <div class="ms-3 w-100">
-                                    <h6 class="mb-0 ">Emma Watson Bni</h6>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                       <p class="mb-0">95 MB</p>
-                                       <small class="float-right font-size-12">Just Now</small>
-                                    </div>
-                                 </div>
-                              </div>
-                           </a>
-                           <a href="javascript:void(0);" class="iq-sub-card">
-                              <div class="d-flex align-items-center">
-                                 <div class="">
-                                    <img class="avatar-40 rounded" src="../../images/user/02.jpg" alt="" loading="lazy">
-                                 </div>
-                                 <div class="ms-3 w-100">
-                                    <h6 class="mb-0 ">New customer is join</h6>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                       <p class="mb-0">Cyst Bni</p>
-                                       <small class="float-right font-size-12">5 days ago</small>
-                                    </div>
-                                 </div>
-                              </div>
-                           </a>
-                           <a href="javascript:void(0);" class="iq-sub-card">
-                              <div class="d-flex align-items-center">
-                                 <div class="">
-                                    <img class="avatar-40 rounded" src="../../images/user/03.jpg" alt="" loading="lazy">
-                                 </div>
-                                 <div class="ms-3 w-100">
-                                    <h6 class="mb-0 ">Two customer is left</h6>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                       <p class="mb-0">Cyst Bni</p>
-                                       <small class="float-right font-size-12">2 days ago</small>
-                                    </div>
-                                 </div>
-                              </div>
-                           </a>
-                           <a href="javascript:void(0);" class="iq-sub-card">
-                              <div class="d-flex align-items-center">
-                                 <div class="">
-                                    <img class="avatar-40 rounded" src="../../images/user/04.jpg" alt="" loading="lazy">
-                                 </div>
-                                 <div class="w-100 ms-3">
-                                    <h6 class="mb-0 ">New Mail from Fenny</h6>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                       <p class="mb-0">Cyst Bni</p>
-                                       <small class="float-right font-size-12">3 days ago</small>
-                                    </div>
-                                 </div>
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="nav-item dropdown user-dropdown">
-                  <a href="javascript:void(0);" class="d-flex align-items-center dropdown-toggle" id="drop-down-arrow"
-                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     <img src="../../images/user/1.jpg" class="img-fluid rounded-circle me-3" alt="user" loading="lazy">
-                     <div class="caption d-none d-lg-block">
-                        <h6 class="mb-0 line-height">Juan Daniel</h6>
-                     </div>
-                  </a>
-                  <div class="sub-drop dropdown-menu caption-menu" aria-labelledby="drop-down-arrow">
-                     <div class="card shadow-none m-0">
-                        <div class="card-header ">
-                           <div class="header-title">
-                              <h5 class="mb-0 ">Hola Juan Daniel</h5>
-                           </div>
-                        </div>
-                        <div class="card-body p-0 ">
-                           <div class="d-flex align-items-center iq-sub-card border-0">
-                              <span class="material-symbols-outlined">
-                                 line_style
-                              </span>
-                              <div class="ms-3">
-                                 <a href="https://templates.iqonic.design/socialv/bs5/html/dist/app/profile.html"
-                                    class="mb-0 h6">
-                                    Mi Perfil
-                                 </a>
-                              </div>
-                           </div>
-
-                           <div class="d-flex align-items-center iq-sub-card border-0">
-                              <span class="material-symbols-outlined">
-                                 manage_accounts
-                              </span>
-                              <div class="ms-3">
-                                 <a href="https://templates.iqonic.design/socialv/bs5/html/dist/app/account-setting.html"
-                                    class="mb-0 h6">
-                                    Configuracion de cuenta
-                                 </a>
-                              </div>
-                           </div>
-
-                           <div class="d-flex align-items-center iq-sub-card">
-                              <span class="material-symbols-outlined">
-                                 login
-                              </span>
-                              <div class="ms-3">
-                                 <a href="sign-in.html" class="mb-0 h6">
-                                    Cerrar Sesión
-                                 </a>
-                              </div>
-                           </div>
-                           <div class=" iq-sub-card">
-                              <h5>Configuración</h5>
-                           </div>
-                           <div class=" mb-3 iq-sub-card border-0" data-setting="radio">
-                              <div class="form-check mb-0 w-100">
-                                 <input class="form-check-input custum-redio-btn" type="radio" value="light"
-                                    name="theme_scheme" id="color-mode-light" >
-                                 <label class="form-check-label h6 d-flex align-items-center justify-content-between"
-                                    for="color-mode-light">
-                                    <span>Modo Claro</span>
-                                    <div class="text-primary ">
-                                       <svg width="60" height="27" viewBox="0 0 60 27" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125"
-                                             fill="white" />
-                                          <circle cx="9.75" cy="9.75" r="3.75" fill="#80868B" />
-                                          <rect x="16.5" y="8.25" width="37.5" height="3" rx="1.5" fill="#DADCE0" />
-                                          <rect x="6" y="18" width="48" height="3" rx="1.5" fill="currentColor" />
-                                          <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125"
-                                             stroke="#DADCE0" stroke-width="0.75" />
-                                       </svg>
-                                    </div>
-                                 </label>
-                              </div>
-                           </div>
-                           <div class=" mb-3 iq-sub-card border-0" data-setting="radio">
-                              <div class="form-check mb-0 w-100 ">
-                                 <input class="form-check-input custum-redio-btn" type="radio" value="dark"
-                                    name="theme_scheme" id="color-mode-dark" checked>
-                                 <label class="form-check-label h6 d-flex align-items-center justify-content-between"
-                                    for="color-mode-dark">
-                                    <span>Modo Oscuro</span>
-                                    <div class="text-primary ">
-                                       <svg width="60" height="27" viewBox="0 0 60 27" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125"
-                                             fill="#1E2745" />
-                                          <circle cx="9.75" cy="9.75" r="3.75" fill="#80868B" />
-                                          <rect x="16.5" y="8.25" width="37.5" height="3" rx="1.5" fill="#DADCE0" />
-                                          <rect x="6" y="18" width="48" height="3" rx="1.5" fill="currentColor" />
-                                          <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125"
-                                             stroke="currentColor" stroke-width="0.75" />
-                                       </svg>
-                                    </div>
-                                 </label>
-                              </div>
-                           </div>
-
-                        </div>
-                     </div>
-                  </div>
-               </li>
-            </ul>
-         </div>
-      </nav>
-   </div>
-
-
-   <!-- sidebar -->
-   <aside class="sidebar sidebar-default sidebar-base navs-rounded-all " id="first-tour" data-toggle="main-sidebar"
-      data-sidebar="responsive">
-      <div class="sidebar-body pt-0 data-scrollbar">
-         <div class="sidebar-list">
-            <!-- Sidebar Menu Start -->
-            <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
-               <li class="nav-item static-item">
-                  <a class="nav-link static-item disabled" href="#" tabindex="-1">
-                     <span class="default-icon">Social</span>
-                     <span class="mini-icon" data-bs-toggle="tooltip" title="Social" data-bs-placement="right">-</span>
-                  </a>
-               </li>
-               <!-- HOME -->
-               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">
-                     <i class="icon material-symbols-outlined">
-                        home
-                     </i>
-                     <span class="item-name">Inicio</span>
-                  </a>
-               </li>
-
-               <!-- MI PERFIL -->
-               <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="profile.html">
-                     <i class="icon material-symbols-outlined">
-                        person
-                     </i>
-                     <span class="item-name">Mi perfil</span>
-                  </a>
-               </li>
-
-               <!-- PUBLICACION -->
-               <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#post" role="button" aria-expanded="false"
-                     aria-controls="profile">
-                     <i class="icon material-symbols-outlined">
-                        article
-                     </i>
-                     <span class="item-name">Publicaciones</span>
-                     <i class="right-icon material-symbols-outlined">chevron_right</i>
-                  </a>
-                  <ul class="sub-nav collapse" id="post" data-bs-parent="#sidebar-menu">
-                     <li class="nav-item">
-                        <a class="nav-link " href="new-post.html">
-                           <i class="icon material-symbols-outlined filled">
-                              fiber_manual_record
-                           </i>
-                           <i class="sidenav-mini-icon"> NP </i>
-                           <span class="item-name"> Crear nueva </span>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link " href="#">
-                           <i class="icon material-symbols-outlined filled">
-                              fiber_manual_record
-                           </i>
-                           <i class="sidenav-mini-icon"> MP </i>
-                           <span class="item-name"> Mis publicaciones </span>
-                        </a>
-                     </li>
-
-                  </ul>
-
-            </ul>
-            <!-- Sidebar Menu End -->
-         </div>
-      </div>
-      <div class="sidebar-footer"></div>
-   </aside>
-
-
-   <div>
-      <div class="position-relative">
-      </div>
-      <div id="content-page" class="content-page">
+<div id="content-page" class="content-page">
 
          <!-- contenido -->
          <div class="container">
@@ -422,7 +21,7 @@
                      <div id="post-modal-data" class="card card-block card-stretch card-height">
                         <div class="card-header d-flex justify-content-start">
                            <div class="user-img me-3">
-                              <img src="../../images/user/1.jpg" alt="userimg" class="avatar-60 rounded-circle"
+                              <img src="images/user/1.jpg" alt="userimg" class="avatar-60 rounded-circle"
                                  loading="lazy">
                            </div>
                            <div class="header-title">
@@ -468,7 +67,7 @@
                                     <div class="d-flex justify-content-between">
                                        <a href="">
                                           <div class="me-3">
-                                             <img class="rounded-circle img-fluid" src="../../images/user/01.jpg"
+                                             <img class="rounded-circle img-fluid" src="images/user/01.jpg"
                                                 style="max-width: 40px;" alt="" loading="lazy">
                                           </div>
                                        </a>
@@ -578,15 +177,15 @@
                                        </div>
                                        <div class="carousel-inner " style="height: 400px;">
                                           <div class="carousel-item active">
-                                             <img src="../../images/posts/1/1.jpg" class="img-fluid w-100 image-cover"
+                                             <img src="images/posts/1/1.jpg" class="img-fluid w-100 image-cover"
                                                 height="100" loading="lazy" alt="image">
                                           </div>
                                           <div class="carousel-item">
-                                             <img src="../../images/posts/1/2.jpg" class="img-fluid w-100 image-cover"
+                                             <img src="images/posts/1/2.jpg" class="img-fluid w-100 image-cover"
                                                 height="100" loading="lazy" alt="image">
                                           </div>
                                           <div class="carousel-item">
-                                             <img src="../../images/posts/1/3.jpg" class="img-fluid w-100 image-cover"
+                                             <img src="images/posts/1/3.jpg" class="img-fluid w-100 image-cover"
                                                 height="100" loading="lazy" alt="image">
                                           </div>
                                        </div>
@@ -633,7 +232,7 @@
                            </div>
                            <!-- LOADER -->
                            <div class="col-sm-12 text-center">
-                              <img src="../../images/page-img/page-load-loader.gif" alt="loader" style="height: 100px;"
+                              <img src="images/page-img/page-load-loader.gif" alt="loader" style="height: 100px;"
                                  loading="lazy">
                            </div>
 
@@ -654,7 +253,7 @@
                                     <ul class="request-list list-inline m-0 p-0">
                                        <li class="d-flex align-items-center  justify-content-between flex-wrap">
                                           <div class="user-img img-fluid flex-shrink-0">
-                                             <img src="../../images/posts/1/1.jpg" alt="story-img"
+                                             <img src="images/posts/1/1.jpg" alt="story-img"
                                                 class="rounded-circle avatar-40" loading="lazy">
                                           </div>
                                           <div class="flex-grow-1 ms-3">
@@ -675,7 +274,7 @@
                                        </li>
                                        <li class="d-flex align-items-center  justify-content-between flex-wrap">
                                           <div class="user-img img-fluid flex-shrink-0">
-                                             <img src="../../images/posts/2/1.webp" alt="story-img"
+                                             <img src="images/posts/2/1.webp" alt="story-img"
                                                 class="rounded-circle avatar-40" loading="lazy">
                                           </div>
                                           <div class="flex-grow-1 ms-3">
@@ -715,7 +314,7 @@
                                     <div class="d-flex justify-content-between">
                                        <a href="">
                                           <div class="me-3">
-                                             <img class="rounded-circle img-fluid" src="../../images/user/1.jpg"
+                                             <img class="rounded-circle img-fluid" src="images/user/1.jpg"
                                                 style="max-width: 40px;" alt="" loading="lazy">
                                           </div>
                                        </a>
@@ -822,15 +421,15 @@
                                        </div>
                                        <div class="carousel-inner " style="height: 400px;">
                                           <div class="carousel-item active">
-                                             <img src="../../images/posts/1/1.jpg" class="img-fluid w-100 image-cover"
+                                             <img src="images/posts/1/1.jpg" class="img-fluid w-100 image-cover"
                                                 height="100" loading="lazy" alt="image">
                                           </div>
                                           <div class="carousel-item">
-                                             <img src="../../images/posts/1/2.jpg" class="img-fluid w-100 image-cover"
+                                             <img src="images/posts/1/2.jpg" class="img-fluid w-100 image-cover"
                                                 height="100" loading="lazy" alt="image">
                                           </div>
                                           <div class="carousel-item">
-                                             <img src="../../images/posts/1/3.jpg" class="img-fluid w-100 image-cover"
+                                             <img src="images/posts/1/3.jpg" class="img-fluid w-100 image-cover"
                                                 height="100" loading="lazy" alt="image">
                                           </div>
                                        </div>
@@ -893,6 +492,7 @@
                </div>
 
 
+               <!--ACCESOS RAPIDOS -->
                <div class="col-lg-4">
                   <div class="card">
                      <div class="card-header d-flex justify-content-between">
@@ -933,65 +533,13 @@
          </div>
 
 
-      </div>
-   </div>
+</div>
+ 
 
+<!-- footer -->
 
-   <footer class="iq-footer bg-white">
-      <div class="container-fluid">
-         <div class="row">
+<%@ include file="partials/footer.jsp" %>
 
-            <div class="col-lg-12 d-flex justify-content-end">
-               Taller Web 1 - Copyright 2023
-               <a href="#" class="mx-2"> AdoptApp </a>
-               All Rights Reserved.
-            </div>
-         </div>
-      </div>
-   </footer> <!-- Live Customizer start -->
-
-
-
-
-
-   <!-- Backend Bundle JavaScript -->
-   <script src="../../js/libs.min.js"></script>
-   <!-- Lodash Utility -->
-   <script src="../../vendor/lodash/lodash.min.js"></script>
-   <!-- Utilities Functions -->
-   <script src="../../js/setting/utility.js"></script>
-   <!-- Settings Script -->
-   <script src="../../js/setting/setting.js"></script>
-   <!-- Settings Init Script -->
-   <script src="../../js/setting/setting-init.js" defer></script>
-   <!-- slider JavaScript -->
-   <script src="../../js/slider.js"></script>
-   <!-- masonry JavaScript -->
-   <script src="../../js/masonry.pkgd.min.js"></script>
-   <!-- SweetAlert JavaScript -->
-   <script src="../../js/enchanter.js"></script>
-   <!-- Sweet-alert Script -->
-   <script src="../../vendor/sweetalert2/dist/sweetalert2.min.js" async></script>
-   <script src="../../js/sweet-alert.js" defer></script>
-   <!-- Chart Custom JavaScript -->
-   <script src="../../js/customizer.js"></script>
-   <!-- app JavaScript -->
-
-   <script src="../../js/app.js"></script>
-   <!-- Flatpickr Script -->
-   <script src="../../vendor/flatpickr/dist/flatpickr.min.js"></script>
-
-   <!-- vanilla Script -->
-   <script src="../../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
-
-   <!--select2 Script -->
-   <script src="../../js/select2.js"></script>
-
-
-
-</body>
-
-
-<!-- Mirrored from templates.iqonic.design/socialv/bs5/html/dist/dashboard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Apr 2023 22:02:25 GMT -->
-
-</html>
+<!-- scripts -->
+  
+ <%@ include file="partials/script.jsp" %>
