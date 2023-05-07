@@ -11267,7 +11267,7 @@ fieldset:disabled .btn {
     width: 100%
 }
 .sign-in-logo img {
-    height: 3.125rem
+    height: 6.125rem
 }
 .sign-in-from {
     padding: 0 3.75rem
@@ -11800,7 +11800,7 @@ fieldset:disabled .btn {
 }
 #top-tabbar-vertical {
     overflow: hidden;
-    color: #555770;
+   
     margin: 0 -1.25rem 3.75rem
 }
 #top-tabbar-vertical li {
@@ -11812,45 +11812,50 @@ fieldset:disabled .btn {
     font-weight: 400
 }
 #top-tabbar-vertical li a {
-    background: #fff;
-    color: #60658a;
+    color: var(--bs-primary);
+    background: rgba(var(--bs-primary-rgb), .2);
     display: block;
+ 
+    text-decoration: none;
+    font-size: 1.125rem;
+    border-radius: .313rem;
     padding: 1.25rem .938rem;
     margin: .625rem 1.25rem;
     text-decoration: none;
-    border: 1px solid rgba(var(--bs-primary-rgb), .2);
-    border-radius: .313rem
+  
+   
 }
 #top-tabbar-vertical li a i {
-    display: inline-block;
     text-align: center;
     height: 3.125rem;
     width: 3.125rem;
     line-height: 3.125rem;
     font-size: 1.25rem;
+    border-radius: 50rem;
+    background: var(--bs-primary);
+    color: #fff;
     margin: 0 1.25rem 0 0;
-    border-radius: 50rem
+   
 }
 #top-tabbar-vertical li.active a {
-    border-color: transparent
+    background: var(--bs-primary);
+    color: #fff
 }
 #top-tabbar-vertical li.active a i {
-    background: #fff
+    background: #fff;
+    color: var(--bs-primary)
 }
-#top-tabbar-vertical li.active#personal a {
-    background: rgba(var(--bs-primary-rgb), .2)
-}
-#top-tabbar-vertical li.active#contact a {
-    background: rgba(255, 155, 138, .2)
-}
-#top-tabbar-vertical li.active#official a {
-    background: rgba(45, 205, 178, .2)
-}
-#top-tabbar-vertical li.active#payment a {
-    background: rgba(255, 186, 104, .2)
-}
+
+
 #top-tabbar-vertical.active {
     color: var(--bs-primary)
+}
+
+#top-tabbar-vertical li.active.done a {
+    background: #2dcdb2
+}
+#top-tabbar-vertical li.active.done a i {
+    color: #2dcdb2
 }
 #form-wizard3 fieldset:not(:first-of-type) {
     display: none
@@ -12189,14 +12194,16 @@ fieldset:disabled .btn {
     bottom: 0;
     overflow: hidden!important;
     right: 0;
-    z-index: 1080
+    z-index: 1080;
+    transition: none!important;
 }
 #loading-center {
     background: url(../images/loader.png) no-repeat scroll center center;
     background-size: 20%;
     width: 100%;
     height: 100%;
-    position: relative
+    position: relative;
+    transition: none!important;
 }
 .loader {
     width: 3em;
@@ -12206,7 +12213,20 @@ fieldset:disabled .btn {
     right: 0;
     top: 0;
     bottom: 0;
-    position: absolute
+    position: absolute;
+    transition:none!important
+}
+
+.brand{
+    background: url(../images/brand-light.png) no-repeat scroll center center;
+    width: 185px;
+    height: 45px;
+    content: "";
+    
+}
+
+.dark .brand{
+    background: url(../images/brand-dark.png) no-repeat scroll center center;
 }
 @keyframes loader1 {
     0%, 100% {
@@ -14550,7 +14570,7 @@ a.image-edit-btn {
 }
 .inner-page-title {
     position: absolute;
-    top: 25%;
+    top: 13%;
     left: 1.875rem
 }
 .inner-page-bg img {
@@ -21063,10 +21083,7 @@ button.bg-soft-dark:hover {
 .dark .stepwizard-row a.btn.active {
     background-color: rgba(var(--bs-primary-rgb), .2)
 }
-.dark #top-tabbar-vertical li a {
-    color: #c7c7c7;
-    background-color: #1a1a1a
-}
+
 .dark .modal-content {
     background: #0f0f0f
 }
@@ -21113,7 +21130,7 @@ button.bg-soft-dark:hover {
     filter: invert(1)
 }
 .dark .card {
-    background: #0f0f0f
+    background: #0f0f0f;
 }
 .dark .card .card-footer,
 .dark .card .card-header {
@@ -23622,6 +23639,11 @@ button.bg-soft-dark:hover {
     padding: 20px 20px;
 }
 
+.dark .dropzone{
+    border: 1px solid #405976!important;
+    background-color:#264054a3!important;
+}
+
 .portrait-profile{
     width: 100%;
     height: 180px;
@@ -23644,4 +23666,65 @@ button.bg-soft-dark:hover {
     left: 0;
     width: 100%;
     height: auto;
+}
+
+.btn-radio-mascota{
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #dfdfdfa3;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.btn-radio-mascota i{
+    display: inline-block;
+    text-align: center;
+    height: 2.125rem;
+    width: 2.125rem;
+    line-height: 2.125rem;
+    font-size: 28px;
+    margin-right: 0.938rem;
+    border-radius: 50rem;
+    background: #50ffb6;
+    color: #018b32;
+    box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, .3)!important;
+    visibility: hidden;
+}
+
+.dark .btn-radio-mascota i{
+    display: inline-block;
+    text-align: center;
+    height: 2.125rem;
+    width: 2.125rem;
+    line-height: 2.125rem;
+    font-size: 28px;
+    margin-right: 0.938rem;
+    border-radius: 50rem;
+    background: #50ffb6;
+    color: #018b32;
+    box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, .3)!important;
+    visibility: hidden;
+    transition: all .08s ease-in-out;
+}
+
+.btn-check:checked+.btn-radio-mascota {
+    color: var(--bs-btn-active-color);
+    background-color: #2dcdb2;
+   
+}
+
+.btn-check:checked+.btn-radio-mascota i {
+    visibility: visible;
+   
+}
+
+.dark .btn-radio-mascota{
+    background-color: #161e24a3;
+}
+
+.dark .btn-check:checked+.btn-radio-mascota {
+    color: var(--bs-btn-active-color);
+    background-color: #264054a3;
+    border: 1px solid #405976!important;
 }

@@ -88,7 +88,7 @@
       theme_scheme: {
         target: "body",
         choices: ["light", "dark"],
-        value: "light",
+        value: "dark",
       },
       theme_color: {
         target: "body",
